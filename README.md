@@ -1,7 +1,8 @@
 # Containernet Container
 
-This repository contains the Dockerfile for the Docker Automated builds. It can be used for the nested environments.
+This repository contains the Dockerfile for the Docker Automated builds. It can be used for the nested containernet environments.
 You can know more about Containernet at: https://github.com/containernet/containernet
+
 
 
 ## Authors
