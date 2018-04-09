@@ -30,6 +30,7 @@ WORKDIR /containernet
 RUN sudo make develop
 RUN cd ..
 WORKDIR /
+RUN ["chmod", "+x", "/containernet-docker/script/entrypoint.sh"]
 
 # tell containernet that it runs in a container
 ENV CONTAINERNET_NESTED 1
