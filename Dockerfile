@@ -33,6 +33,6 @@ ENV CONTAINERNET_NESTED 1
 
 # Important: This entrypoint is required to start the OVS service
 # ENTRYPOINT ["util/docker/entrypoint.sh"]
-ENTRYPOINT ["curl https://github.com/prashplus/containernet-docker/raw/master/entrypoint.sh | sh"]
+ENTRYPOINT ["/containernet-docker/entrypoint.sh"]
 
 CMD ["python", "examples/containernet_example.py"]

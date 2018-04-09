@@ -7,7 +7,7 @@ services:
 
 before_install:
   - docker build -t prashplus/test /home/travis/build/prashplus/containernet-docker
-  - docker run -d --name test -it prashplus/test /bin/sh
+  - docker run -d --name test -v /home/travis/build/prashplus/containernet-docker:containernet-docker prashplus/test /bin/sh
 
 script:
   - docker ps -a
