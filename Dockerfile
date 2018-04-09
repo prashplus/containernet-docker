@@ -32,5 +32,7 @@ RUN sudo make develop
 ENV CONTAINERNET_NESTED 1
 
 # Important: This entrypoint is required to start the OVS service
-ENTRYPOINT ["util/docker/entrypoint.sh"]
+# ENTRYPOINT ["util/docker/entrypoint.sh"]
+ENTRYPOINT ["service openvswitch-switch start"]
+
 CMD ["python", "examples/containernet_example.py"]
