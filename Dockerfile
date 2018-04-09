@@ -23,6 +23,7 @@ RUN pip install docker
 
 # install containernet (using its Ansible playbook)
 RUN git clone https://github.com/containernet/containernet
+RUN git clone https://github.com/prashplus/containernet-docker
 RUN bash containernet/util/install.sh
 RUN cd containernet
 WORKDIR /containernet
@@ -33,6 +34,6 @@ ENV CONTAINERNET_NESTED 1
 
 # Important: This entrypoint is required to start the OVS service
 # ENTRYPOINT ["util/docker/entrypoint.sh"]
-ENTRYPOINT ["sudo bash /script/entrypoint.sh"]
+ENTRYPOINT ["sudo bash /containernet-docker/script/entrypoint.sh"]
 
 CMD ["python", "examples/containernet_example.py"]
