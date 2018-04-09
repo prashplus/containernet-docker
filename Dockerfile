@@ -28,12 +28,14 @@ RUN bash containernet/util/install.sh
 RUN cd containernet
 WORKDIR /containernet
 RUN sudo make develop
+RUN cd ..
+WORKDIR /
 
 # tell containernet that it runs in a container
 ENV CONTAINERNET_NESTED 1
 
 # Important: This entrypoint is required to start the OVS service
 # ENTRYPOINT ["util/docker/entrypoint.sh"]
-ENTRYPOINT ["sudo bash /containernet-docker/script/entrypoint.sh"]
+ENTRYPOINT ["containernet-docker/script/entrypoint.sh"]
 
 CMD ["python", "examples/containernet_example.py"]
