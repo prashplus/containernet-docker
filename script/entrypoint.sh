@@ -2,6 +2,7 @@
 
 # start OVS
 service openvswitch-switch start
+service docker start
 
 # this cannot be done from the Dockerfile since we have the socket not mounted during build
 set +e
