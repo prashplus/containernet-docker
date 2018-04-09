@@ -20,7 +20,6 @@ RUN curl https://get.docker.com | sh
 RUN service docker start
 RUN pip install pytest
 RUN pip install docker
-RUN pip install python-iptable
 
 # install containernet (using its Ansible playbook)
 RUN git clone https://github.com/containernet/containernet
