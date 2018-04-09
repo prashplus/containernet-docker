@@ -25,6 +25,7 @@ RUN pip install docker
 RUN git clone https://github.com/containernet/containernet
 RUN bash containernet/util/install.sh
 RUN cd containernet
+WORKDIR /containernet
 RUN sudo make develop
 
 # tell containernet that it runs in a container
